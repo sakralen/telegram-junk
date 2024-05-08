@@ -4,7 +4,7 @@
   tasks:
     - name: Run terraform
       terraform:
-        project_path: "./terraform"
+        project_path: "../terraform"
         force_init: yes
         state: present
       register: trfrm
