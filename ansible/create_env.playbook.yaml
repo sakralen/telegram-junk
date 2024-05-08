@@ -14,7 +14,7 @@
         name: movie_bot
         groups: nodes
         ansible_host: "{{ trfrm.outputs.servers.value.movie_bot }}"
-        ansible_ssh_private_key_file: ~/.ssh/key
+        ansible_ssh_private_key_file: ~/.ssh/key.txt
         ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
         
 - name: Timeout for instance creating
