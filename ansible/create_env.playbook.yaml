@@ -26,9 +26,9 @@
         host: "{{ trfrm.outputs.servers.value.movie_bot }}"
         port: 22
 
-    - name: Update apt package cache
-      apt:
-        update_cache: yes
+#    - name: Update apt package cache
+#      apt:
+#        update_cache: yes
 
     - name: Install JDK 17
       apt:
