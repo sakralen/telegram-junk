@@ -1,15 +1,13 @@
-# Define required providers
 terraform {
-required_version = ">= 0.14.0"
+  required_version = ">= 0.14.0"
   required_providers {
     openstack = {
       source  = "terraform-provider-openstack/openstack"
-      version = "~> 1.53.0"
+      version = "~> 1.39.0"
     }
   }
 }
 
-# Configure the Vault Provider by $VAULT_ADDR and $VAULT_TOKEN
 provider "openstack" {
   auth_url = "https://cloud.crplab.ru:5000"
   tenant_id = "a02aed7892fa45d0bc2bef3b8a08a6e9"
