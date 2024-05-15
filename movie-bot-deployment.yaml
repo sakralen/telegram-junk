@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: movie-bot
-        image: bumashka/movie-bot:latest
+        image: movie_bot-java-jar:latest
         ports:
         - containerPort: 6969
