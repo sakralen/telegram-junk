@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-bot-deployment
+  namespace: buldakova-ma
+  labels:
+    app: movie-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-bot
+  template:
+    metadata:
+      labels:
+        app: movie-bot
+    spec:
+      containers:
+      - name: movie-bot
+        image: bumashka/movie-bot:latest
+        ports:
+        - containerPort: 5000
