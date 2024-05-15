@@ -19,4 +19,4 @@ spec:
       - name: movie-bot
         image: bumashka/movie-bot:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 6969
