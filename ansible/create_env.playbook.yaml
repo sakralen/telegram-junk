@@ -25,7 +25,7 @@
       wait_for:
         host: "{{ trfrm.outputs.servers.value.movie_bot }}"
         port: 22
-
+        
 - name: Deploy app from docker image
   hosts: movie_bot_docker
   remote_user: ubuntu
@@ -86,7 +86,7 @@
           
       - name: Copy tar to host
         copy:
-          src:  ../../movie_bot-java-jar.tar
+          src:  movie_bot-java-jar.tar
           dest: /home/ubuntu/project/
           owner: ubuntu
           group: docker
