@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: movie-bot
-        image: bumashka/movie-bot
+        image: bumashka/movie-bot:firsttry
         ports:
         - containerPort: 6969
