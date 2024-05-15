@@ -1,5 +1,5 @@
 - name: run local terraform
-  hosts: localhost
+  hosts: 127.0.0.1
   connection: local
   tasks:
     - name: Run terraform
@@ -18,7 +18,7 @@
         ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
         
 - name: Timeout for instance creating
-  hosts: localhost
+  hosts: 127.0.0.1
   connection: local     
   tasks:
     - name: Wait for server port 22
@@ -107,11 +107,11 @@
           state: started
           restart_policy: always
           ports:
-            - "8080:8080"
-        
-      rescue:
-       - name: Clean up resources because of an error
-         terraform:
-           project_path: "./terraform"
-           state: absent 
-         delegate_to: 127.0.0.1
+            - "8080:6969"
+ 
+#      rescue:
+#      - name: Clean up resources because of an error
+#         terraform:
+#          project_path: "./terraform"
+#           state: absent 
+#         delegate_to: 127.0.0.1
