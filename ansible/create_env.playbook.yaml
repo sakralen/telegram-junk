@@ -86,7 +86,7 @@
           
       - name: Copy tar to host
         copy:
-          src:  movie_bot-java-jar.tar
+          src: '../movie_bot-java-jar.tar'
           dest: /home/ubuntu/project/
           owner: ubuntu
           group: docker
